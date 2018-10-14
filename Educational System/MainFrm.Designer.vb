@@ -47,11 +47,11 @@ Partial Class MainFrm
         Me.Panel14 = New System.Windows.Forms.Panel()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         Me.Panel15 = New System.Windows.Forms.Panel()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Panel13 = New System.Windows.Forms.Panel()
         Me.Panel12 = New System.Windows.Forms.Panel()
         Me.Panel11 = New System.Windows.Forms.Panel()
         Me.Panel10 = New System.Windows.Forms.Panel()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Panel2.SuspendLayout()
         CType(Me.PicMinimize, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PicClose, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -116,11 +116,11 @@ Partial Class MainFrm
         'lblUsername
         '
         Me.lblUsername.AutoSize = True
-        Me.lblUsername.Font = New System.Drawing.Font("Noto Kufi Arabic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblUsername.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblUsername.ForeColor = System.Drawing.Color.White
         Me.lblUsername.Location = New System.Drawing.Point(44, 4)
         Me.lblUsername.Name = "lblUsername"
-        Me.lblUsername.Size = New System.Drawing.Size(138, 36)
+        Me.lblUsername.Size = New System.Drawing.Size(87, 24)
         Me.lblUsername.TabIndex = 0
         Me.lblUsername.Text = "أسم المستخدم"
         '
@@ -191,11 +191,11 @@ Partial Class MainFrm
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Noto Kufi Arabic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(108, Byte), Integer))
         Me.Label3.Location = New System.Drawing.Point(17, 8)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(129, 36)
+        Me.Label3.Size = New System.Drawing.Size(101, 24)
         Me.Label3.TabIndex = 1
         Me.Label3.Text = "تسجيل الخروج"
         '
@@ -232,11 +232,11 @@ Partial Class MainFrm
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Noto Kufi Arabic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(108, Byte), Integer))
         Me.Label2.Location = New System.Drawing.Point(32, 8)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(103, 36)
+        Me.Label2.Size = New System.Drawing.Size(72, 24)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "لوحة تحكم"
         '
@@ -272,11 +272,11 @@ Partial Class MainFrm
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Noto Kufi Arabic", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(93, Byte), Integer), CType(CType(108, Byte), Integer))
         Me.Label1.Location = New System.Drawing.Point(12, 8)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(142, 36)
+        Me.Label1.Size = New System.Drawing.Size(105, 24)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "الصفحة الرئسية"
         '
@@ -324,6 +324,13 @@ Partial Class MainFrm
         Me.Panel15.Size = New System.Drawing.Size(129, 204)
         Me.Panel15.TabIndex = 0
         '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(12, 25)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 26)
+        Me.TextBox1.TabIndex = 0
+        '
         'Panel13
         '
         Me.Panel13.Dock = System.Windows.Forms.DockStyle.Left
@@ -356,13 +363,6 @@ Partial Class MainFrm
         Me.Panel10.Name = "Panel10"
         Me.Panel10.Size = New System.Drawing.Size(1072, 38)
         Me.Panel10.TabIndex = 2
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(12, 25)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 26)
-        Me.TextBox1.TabIndex = 0
         '
         'MainFrm
         '
