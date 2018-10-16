@@ -15,3 +15,19 @@ C:\Users\Altah3r\source\repos\Educational System\Educational System\bin\Debug\De
 C:\Users\Altah3r\source\repos\Educational System\Educational System\obj\Debug\Educational_System.MainFrm.resources
 C:\Users\Altah3r\source\repos\Educational System\Educational System\obj\Debug\Educational System.vbproj.CopyComplete
 C:\Users\Altah3r\source\repos\Educational System\Educational System\bin\Debug\MaterialSkin.dll
+C:\Users\Altah3r\source\repos\altah3r\EDUSYSTEM\Educational System\bin\Debug\Educational System.exe.config
+C:\Users\Altah3r\source\repos\altah3r\EDUSYSTEM\Educational System\bin\Debug\Educational System.exe
+C:\Users\Altah3r\source\repos\altah3r\EDUSYSTEM\Educational System\bin\Debug\Educational System.pdb
+C:\Users\Altah3r\source\repos\altah3r\EDUSYSTEM\Educational System\bin\Debug\Educational System.xml
+C:\Users\Altah3r\source\repos\altah3r\EDUSYSTEM\Educational System\bin\Debug\MaterialSkin.dll
+C:\Users\Altah3r\source\repos\altah3r\EDUSYSTEM\Educational System\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\Altah3r\source\repos\altah3r\EDUSYSTEM\Educational System\obj\Debug\Educational System.vbprojAssemblyReference.cache
+C:\Users\Altah3r\source\repos\altah3r\EDUSYSTEM\Educational System\obj\Debug\Educational_System.Form1.resources
+C:\Users\Altah3r\source\repos\altah3r\EDUSYSTEM\Educational System\obj\Debug\Educational_System.MainFrm.resources
+C:\Users\Altah3r\source\repos\altah3r\EDUSYSTEM\Educational System\obj\Debug\Educational_System.Resources.resources
+C:\Users\Altah3r\source\repos\altah3r\EDUSYSTEM\Educational System\obj\Debug\Educational System.vbproj.GenerateResource.cache
+C:\Users\Altah3r\source\repos\altah3r\EDUSYSTEM\Educational System\obj\Debug\Educational System.vbproj.CoreCompileInputs.cache
+C:\Users\Altah3r\source\repos\altah3r\EDUSYSTEM\Educational System\obj\Debug\Educational System.vbproj.CopyComplete
+C:\Users\Altah3r\source\repos\altah3r\EDUSYSTEM\Educational System\obj\Debug\Educational System.exe
+C:\Users\Altah3r\source\repos\altah3r\EDUSYSTEM\Educational System\obj\Debug\Educational System.xml
+C:\Users\Altah3r\source\repos\altah3r\EDUSYSTEM\Educational System\obj\Debug\Educational System.pdb

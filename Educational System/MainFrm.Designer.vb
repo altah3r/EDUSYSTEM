@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class MainFrm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class MainFrm
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainFrm))
         Me.Panel2 = New System.Windows.Forms.Panel()
@@ -46,8 +46,6 @@ Partial Class MainFrm
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel14 = New System.Windows.Forms.Panel()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.Panel15 = New System.Windows.Forms.Panel()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Panel13 = New System.Windows.Forms.Panel()
         Me.Panel12 = New System.Windows.Forms.Panel()
         Me.Panel11 = New System.Windows.Forms.Panel()
@@ -63,8 +61,6 @@ Partial Class MainFrm
         Me.PnlMainPage.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel14.SuspendLayout()
-        Me.FlowLayoutPanel1.SuspendLayout()
-        Me.Panel15.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel2
@@ -120,6 +116,7 @@ Partial Class MainFrm
         Me.lblUsername.ForeColor = System.Drawing.Color.White
         Me.lblUsername.Location = New System.Drawing.Point(44, 4)
         Me.lblUsername.Name = "lblUsername"
+        Me.lblUsername.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.lblUsername.Size = New System.Drawing.Size(87, 24)
         Me.lblUsername.TabIndex = 0
         Me.lblUsername.Text = "أسم المستخدم"
@@ -308,28 +305,12 @@ Partial Class MainFrm
         '
         'FlowLayoutPanel1
         '
-        Me.FlowLayoutPanel1.Controls.Add(Me.Panel15)
+        Me.FlowLayoutPanel1.AutoScroll = True
         Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
         Me.FlowLayoutPanel1.Size = New System.Drawing.Size(872, 548)
         Me.FlowLayoutPanel1.TabIndex = 0
-        '
-        'Panel15
-        '
-        Me.Panel15.Controls.Add(Me.TextBox1)
-        Me.Panel15.Location = New System.Drawing.Point(15, 15)
-        Me.Panel15.Margin = New System.Windows.Forms.Padding(15)
-        Me.Panel15.Name = "Panel15"
-        Me.Panel15.Size = New System.Drawing.Size(129, 204)
-        Me.Panel15.TabIndex = 0
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(12, 25)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 26)
-        Me.TextBox1.TabIndex = 0
         '
         'Panel13
         '
@@ -392,9 +373,6 @@ Partial Class MainFrm
         Me.PnlMainPage.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.Panel14.ResumeLayout(False)
-        Me.FlowLayoutPanel1.ResumeLayout(False)
-        Me.Panel15.ResumeLayout(False)
-        Me.Panel15.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -426,6 +404,4 @@ Partial Class MainFrm
     Friend WithEvents Panel12 As Panel
     Friend WithEvents Line4 As DevComponents.DotNetBar.Controls.Line
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
-    Friend WithEvents Panel15 As Panel
-    Friend WithEvents TextBox1 As TextBox
 End Class
