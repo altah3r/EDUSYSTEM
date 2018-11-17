@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBEDUModelStoreContainer" CdmEntityContainer="ContextEDU">
+    <EntitySetMapping Name="Answers">
+      <EntityTypeMapping TypeName="DBEDUModel.Answer">
+        <MappingFragment StoreEntitySet="Answer">
+          <ScalarProperty Name="ANSID" ColumnName="ANSID" />
+          <ScalarProperty Name="ANSDescription" ColumnName="ANSDescription" />
+          <ScalarProperty Name="ANSStatus" ColumnName="ANSStatus" />
+          <ScalarProperty Name="QID" ColumnName="QID" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Classes">
+      <EntityTypeMapping TypeName="DBEDUModel.Class">
+        <MappingFragment StoreEntitySet="Class">
+          <ScalarProperty Name="CLASSID" ColumnName="CLASSID" />
+          <ScalarProperty Name="CLASSName" ColumnName="CLASSName" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Lessons">
+      <EntityTypeMapping TypeName="DBEDUModel.Lesson">
+        <MappingFragment StoreEntitySet="Lessons">
+          <ScalarProperty Name="LSNID" ColumnName="LSNID" />
+          <ScalarProperty Name="LSNName" ColumnName="LSNName" />
+          <ScalarProperty Name="LSNLink" ColumnName="LSNLink" />
+          <ScalarProperty Name="SUBID" ColumnName="SUBID" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="LSNLenght" ColumnName="LSNLenght" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Questions">
+      <EntityTypeMapping TypeName="DBEDUModel.Question">
+        <MappingFragment StoreEntitySet="Question">
+          <ScalarProperty Name="QID" ColumnName="QID" />
+          <ScalarProperty Name="QDescription" ColumnName="QDescription" />
+          <ScalarProperty Name="QType" ColumnName="QType" />
+          <ScalarProperty Name="QAnswersNum" ColumnName="QAnswersNum" />
+          <ScalarProperty Name="LSNID" ColumnName="LSNID" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Students">
+      <EntityTypeMapping TypeName="DBEDUModel.Student">
+        <MappingFragment StoreEntitySet="Students">
+          <ScalarProperty Name="STDID" ColumnName="STDID" />
+          <ScalarProperty Name="STDName" ColumnName="STDName" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="CLASSID" ColumnName="CLASSID" />
+          <ScalarProperty Name="YEARID" ColumnName="YEARID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Subjects">
+      <EntityTypeMapping TypeName="DBEDUModel.Subject">
+        <MappingFragment StoreEntitySet="Subject">
+          <ScalarProperty Name="SUBID" ColumnName="SUBID" />
+          <ScalarProperty Name="SUBName" ColumnName="SUBName" />
+          <ScalarProperty Name="SUBDescription" ColumnName="SUBDescription" />
+          <ScalarProperty Name="SUBPicture" ColumnName="SUBPicture" />
+          <ScalarProperty Name="YEARID" ColumnName="YEARID" />
+          <ScalarProperty Name="STDID" ColumnName="STDID" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="DBEDUModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="DBEDUModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="USERName" ColumnName="USERName" />
+          <ScalarProperty Name="USERPassword" ColumnName="USERPassword" />
+          <ScalarProperty Name="InserPre" ColumnName="InserPre" />
+          <ScalarProperty Name="DeletePre" ColumnName="DeletePre" />
+          <ScalarProperty Name="UpdatePre" ColumnName="UpdatePre" />
+          <ScalarProperty Name="USERAdminRight" ColumnName="USERAdminRight" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Years">
+      <EntityTypeMapping TypeName="DBEDUModel.Year">
+        <MappingFragment StoreEntitySet="Year">
+          <ScalarProperty Name="YEARID" ColumnName="YEARID" />
+          <ScalarProperty Name="USERID" ColumnName="USERID" />
+          <ScalarProperty Name="YEAR1" ColumnName="YEAR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ed188d99b75749afbb37afaad6e213b2" Name="Diagram1">
+        <EntityTypeShape EntityType="DBEDUModel.Answer" Width="1.5" PointX="3" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBEDUModel.Class" Width="1.5" PointX="3" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBEDUModel.Lesson" Width="1.5" PointX="9.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBEDUModel.Question" Width="1.5" PointX="12" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBEDUModel.Student" Width="1.5" PointX="5.25" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBEDUModel.Subject" Width="1.5" PointX="7.5" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBEDUModel.sysdiagram" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBEDUModel.User" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBEDUModel.Year" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
+        <AssociationConnector Association="DBEDUModel.FK_Answer_Question" ManuallyRouted="false" />
+        <AssociationConnector Association="DBEDUModel.FK_Answer_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="DBEDUModel.FK_Class_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="DBEDUModel.FK_Students_Class" ManuallyRouted="false" />
+        <AssociationConnector Association="DBEDUModel.FK_Lessons_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="DBEDUModel.FK_Question_Lessons" ManuallyRouted="false" />
+        <AssociationConnector Association="DBEDUModel.FK_Video_Subject" ManuallyRouted="false" />
+        <AssociationConnector Association="DBEDUModel.FK_Question_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="DBEDUModel.FK_Students_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="DBEDUModel.FK_Students_Year" ManuallyRouted="false" />
+        <AssociationConnector Association="DBEDUModel.FK_Subject_Students" ManuallyRouted="false" />
+        <AssociationConnector Association="DBEDUModel.FK_Subject_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="DBEDUModel.FK_Subject_Year" ManuallyRouted="false" />
+        <AssociationConnector Association="DBEDUModel.FK_Year_Users" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

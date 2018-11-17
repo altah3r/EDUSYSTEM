@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBEDUModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Answer">
+    <Key>
+      <PropertyRef Name="ANSID" />
+    </Key>
+    <Property Name="ANSID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ANSDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ANSStatus" Type="Boolean" Nullable="false" />
+    <Property Name="QID" Type="Int32" Nullable="false" />
+    <Property Name="USERID" Type="Int32" />
+    <NavigationProperty Name="Question" Relationship="Self.FK_Answer_Question" FromRole="Answer" ToRole="Question" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Answer_Users" FromRole="Answer" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Class">
+    <Key>
+      <PropertyRef Name="CLASSID" />
+    </Key>
+    <Property Name="CLASSID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CLASSName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="USERID" Type="Int32" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Class_Users" FromRole="Class" ToRole="Users" />
+    <NavigationProperty Name="Students" Relationship="Self.FK_Students_Class" FromRole="Class" ToRole="Students" />
+  </EntityType>
+  <EntityType Name="Lesson">
+    <Key>
+      <PropertyRef Name="LSNID" />
+    </Key>
+    <Property Name="LSNID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LSNName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LSNLink" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SUBID" Type="Int32" Nullable="false" />
+    <Property Name="USERID" Type="Int32" />
+    <Property Name="LSNLenght" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Lessons_Users" FromRole="Lessons" ToRole="Users" />
+    <NavigationProperty Name="Questions" Relationship="Self.FK_Question_Lessons" FromRole="Lessons" ToRole="Question" />
+    <NavigationProperty Name="Subject" Relationship="Self.FK_Video_Subject" FromRole="Lessons" ToRole="Subject" />
+  </EntityType>
+  <EntityType Name="Question">
+    <Key>
+      <PropertyRef Name="QID" />
+    </Key>
+    <Property Name="QID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="QDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="QType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="QAnswersNum" Type="Int32" Nullable="false" />
+    <Property Name="LSNID" Type="Int32" Nullable="false" />
+    <Property Name="USERID" Type="Int32" />
+    <NavigationProperty Name="Answers" Relationship="Self.FK_Answer_Question" FromRole="Question" ToRole="Answer" />
+    <NavigationProperty Name="Lesson" Relationship="Self.FK_Question_Lessons" FromRole="Question" ToRole="Lessons" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Question_Users" FromRole="Question" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="STDID" />
+    </Key>
+    <Property Name="STDID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="STDName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="USERID" Type="Int32" Nullable="false" />
+    <Property Name="CLASSID" Type="Int32" Nullable="false" />
+    <Property Name="YEARID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Class" Relationship="Self.FK_Students_Class" FromRole="Students" ToRole="Class" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Students_Users" FromRole="Students" ToRole="Users" />
+    <NavigationProperty Name="Year" Relationship="Self.FK_Students_Year" FromRole="Students" ToRole="Year" />
+    <NavigationProperty Name="Subjects" Relationship="Self.FK_Subject_Students" FromRole="Students" ToRole="Subject" />
+  </EntityType>
+  <EntityType Name="Subject">
+    <Key>
+      <PropertyRef Name="SUBID" />
+    </Key>
+    <Property Name="SUBID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SUBName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SUBDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SUBPicture" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="YEARID" Type="Int32" Nullable="false" />
+    <Property Name="STDID" Type="Int32" />
+    <Property Name="USERID" Type="Int32" />
+    <NavigationProperty Name="Lessons" Relationship="Self.FK_Video_Subject" FromRole="Subject" ToRole="Lessons" />
+    <NavigationProperty Name="Student" Relationship="Self.FK_Subject_Students" FromRole="Subject" ToRole="Students" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Subject_Users" FromRole="Subject" ToRole="Users" />
+    <NavigationProperty Name="Year" Relationship="Self.FK_Subject_Year" FromRole="Subject" ToRole="Year" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="USERID" />
+    </Key>
+    <Property Name="USERID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="USERName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="USERPassword" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="InserPre" Type="Boolean" />
+    <Property Name="DeletePre" Type="Boolean" />
+    <Property Name="UpdatePre" Type="Boolean" />
+    <Property Name="USERAdminRight" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Answers" Relationship="Self.FK_Answer_Users" FromRole="Users" ToRole="Answer" />
+    <NavigationProperty Name="Classes" Relationship="Self.FK_Class_Users" FromRole="Users" ToRole="Class" />
+    <NavigationProperty Name="Lessons" Relationship="Self.FK_Lessons_Users" FromRole="Users" ToRole="Lessons" />
+    <NavigationProperty Name="Questions" Relationship="Self.FK_Question_Users" FromRole="Users" ToRole="Question" />
+    <NavigationProperty Name="Students" Relationship="Self.FK_Students_Users" FromRole="Users" ToRole="Students" />
+    <NavigationProperty Name="Subjects" Relationship="Self.FK_Subject_Users" FromRole="Users" ToRole="Subject" />
+    <NavigationProperty Name="Years" Relationship="Self.FK_Year_Users" FromRole="Users" ToRole="Year" />
+  </EntityType>
+  <EntityType Name="Year">
+    <Key>
+      <PropertyRef Name="YEARID" />
+    </Key>
+    <Property Name="YEARID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="USERID" Type="Int32" />
+    <Property Name="YEAR1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Students" Relationship="Self.FK_Students_Year" FromRole="Year" ToRole="Students" />
+    <NavigationProperty Name="Subjects" Relationship="Self.FK_Subject_Year" FromRole="Year" ToRole="Subject" />
+    <NavigationProperty Name="User" Relationship="Self.FK_Year_Users" FromRole="Year" ToRole="Users" />
+  </EntityType>
+  <Association Name="FK_Answer_Question">
+    <End Role="Question" Type="Self.Question" Multiplicity="1" />
+    <End Role="Answer" Type="Self.Answer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Question">
+        <PropertyRef Name="QID" />
+      </Principal>
+      <Dependent Role="Answer">
+        <PropertyRef Name="QID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Answer_Users">
+    <End Role="Users" Type="Self.User" Multiplicity="0..1" />
+    <End Role="Answer" Type="Self.Answer" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="USERID" />
+      </Principal>
+      <Dependent Role="Answer">
+        <PropertyRef Name="USERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Class_Users">
+    <End Role="Users" Type="Self.User" Multiplicity="0..1" />
+    <End Role="Class" Type="Self.Class" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="USERID" />
+      </Principal>
+      <Dependent Role="Class">
+        <PropertyRef Name="USERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Students_Class">
+    <End Role="Class" Type="Self.Class" Multiplicity="1" />
+    <End Role="Students" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Class">
+        <PropertyRef Name="CLASSID" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="CLASSID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Lessons_Users">
+    <End Role="Users" Type="Self.User" Multiplicity="0..1" />
+    <End Role="Lessons" Type="Self.Lesson" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="USERID" />
+      </Principal>
+      <Dependent Role="Lessons">
+        <PropertyRef Name="USERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Question_Lessons">
+    <End Role="Lessons" Type="Self.Lesson" Multiplicity="1" />
+    <End Role="Question" Type="Self.Question" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lessons">
+        <PropertyRef Name="LSNID" />
+      </Principal>
+      <Dependent Role="Question">
+        <PropertyRef Name="LSNID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Video_Subject">
+    <End Role="Subject" Type="Self.Subject" Multiplicity="1" />
+    <End Role="Lessons" Type="Self.Lesson" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subject">
+        <PropertyRef Name="SUBID" />
+      </Principal>
+      <Dependent Role="Lessons">
+        <PropertyRef Name="SUBID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Question_Users">
+    <End Role="Users" Type="Self.User" Multiplicity="0..1" />
+    <End Role="Question" Type="Self.Question" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="USERID" />
+      </Principal>
+      <Dependent Role="Question">
+        <PropertyRef Name="USERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Students_Users">
+    <End Role="Users" Type="Self.User" Multiplicity="1" />
+    <End Role="Students" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="USERID" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="USERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Students_Year">
+    <End Role="Year" Type="Self.Year" Multiplicity="1" />
+    <End Role="Students" Type="Self.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Year">
+        <PropertyRef Name="YEARID" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="YEARID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Subject_Students">
+    <End Role="Students" Type="Self.Student" Multiplicity="0..1" />
+    <End Role="Subject" Type="Self.Subject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Students">
+        <PropertyRef Name="STDID" />
+      </Principal>
+      <Dependent Role="Subject">
+        <PropertyRef Name="STDID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Subject_Users">
+    <End Role="Users" Type="Self.User" Multiplicity="0..1" />
+    <End Role="Subject" Type="Self.Subject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="USERID" />
+      </Principal>
+      <Dependent Role="Subject">
+        <PropertyRef Name="USERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Subject_Year">
+    <End Role="Year" Type="Self.Year" Multiplicity="1" />
+    <End Role="Subject" Type="Self.Subject" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Year">
+        <PropertyRef Name="YEARID" />
+      </Principal>
+      <Dependent Role="Subject">
+        <PropertyRef Name="YEARID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Year_Users">
+    <End Role="Users" Type="Self.User" Multiplicity="0..1" />
+    <End Role="Year" Type="Self.Year" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="USERID" />
+      </Principal>
+      <Dependent Role="Year">
+        <PropertyRef Name="USERID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ContextEDU" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Answers" EntityType="Self.Answer" />
+    <EntitySet Name="Classes" EntityType="Self.Class" />
+    <EntitySet Name="Lessons" EntityType="Self.Lesson" />
+    <EntitySet Name="Questions" EntityType="Self.Question" />
+    <EntitySet Name="Students" EntityType="Self.Student" />
+    <EntitySet Name="Subjects" EntityType="Self.Subject" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="Years" EntityType="Self.Year" />
+    <AssociationSet Name="FK_Answer_Question" Association="Self.FK_Answer_Question">
+      <End Role="Question" EntitySet="Questions" />
+      <End Role="Answer" EntitySet="Answers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Answer_Users" Association="Self.FK_Answer_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Answer" EntitySet="Answers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Class_Users" Association="Self.FK_Class_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Class" EntitySet="Classes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Students_Class" Association="Self.FK_Students_Class">
+      <End Role="Class" EntitySet="Classes" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Lessons_Users" Association="Self.FK_Lessons_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Lessons" EntitySet="Lessons" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Question_Lessons" Association="Self.FK_Question_Lessons">
+      <End Role="Lessons" EntitySet="Lessons" />
+      <End Role="Question" EntitySet="Questions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Video_Subject" Association="Self.FK_Video_Subject">
+      <End Role="Subject" EntitySet="Subjects" />
+      <End Role="Lessons" EntitySet="Lessons" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Question_Users" Association="Self.FK_Question_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Question" EntitySet="Questions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Students_Users" Association="Self.FK_Students_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Students_Year" Association="Self.FK_Students_Year">
+      <End Role="Year" EntitySet="Years" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Subject_Students" Association="Self.FK_Subject_Students">
+      <End Role="Students" EntitySet="Students" />
+      <End Role="Subject" EntitySet="Subjects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Subject_Users" Association="Self.FK_Subject_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Subject" EntitySet="Subjects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Subject_Year" Association="Self.FK_Subject_Year">
+      <End Role="Year" EntitySet="Years" />
+      <End Role="Subject" EntitySet="Subjects" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Year_Users" Association="Self.FK_Year_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Year" EntitySet="Years" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

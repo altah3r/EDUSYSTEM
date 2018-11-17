@@ -49,13 +49,22 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.18, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialSkin.Updated.0.2.2\lib\MaterialSkin.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -77,18 +86,121 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
+    <Compile Include="DTOs\LoginDTO.vb" />
+    <Compile Include="Forms\FrmClass.Designer.vb">
+      <DependentUpon>FrmClass.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmClass.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="Forms\FrmControlPanel.Designer.vb">
+      <DependentUpon>FrmControlPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmControlPanel.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainFrm.Designer.vb">
+    <Compile Include="Forms\FrmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmLogin.Designer.vb">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmStudent.Designer.vb">
+      <DependentUpon>FrmStudent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmStudent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmYears.Designer.vb">
+      <DependentUpon>FrmYears.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmYears.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainFrm.Designer.vb">
       <DependentUpon>MainFrm.vb</DependentUpon>
     </Compile>
-    <Compile Include="MainFrm.vb">
+    <Compile Include="Forms\MainFrm.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControl1.Designer.vb">
+      <DependentUpon>UserControl1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControl1.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControl\MainUC.Designer.vb">
+      <DependentUpon>MainUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControl\MainUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControl\QuestionUC.Designer.vb">
+      <DependentUpon>QuestionUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControl\QuestionUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControl\StudentUC.Designer.vb">
+      <DependentUpon>StudentUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControl\StudentUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControl\SubjectUC.Designer.vb">
+      <DependentUpon>SubjectUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControl\SubjectUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControl\UserControlUC.Designer.vb">
+      <DependentUpon>UserControlUC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControl\UserControlUC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Models\Answer.vb">
+      <DependentUpon>ModelEdu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Class.vb">
+      <DependentUpon>ModelEdu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Lesson.vb">
+      <DependentUpon>ModelEdu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelEdu.Context.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelEdu.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelEdu.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelEdu.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelEdu.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelEdu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Question.vb">
+      <DependentUpon>ModelEdu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Student.vb">
+      <DependentUpon>ModelEdu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Subject.vb">
+      <DependentUpon>ModelEdu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagram.vb">
+      <DependentUpon>ModelEdu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User.vb">
+      <DependentUpon>ModelEdu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Year.vb">
+      <DependentUpon>ModelEdu.tt</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -105,13 +217,44 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Services\LoginService.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\FrmClass.resx">
+      <DependentUpon>FrmClass.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainFrm.resx">
+    <EmbeddedResource Include="Forms\FrmControlPanel.resx">
+      <DependentUpon>FrmControlPanel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmLogin.resx">
+      <DependentUpon>FrmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmStudent.resx">
+      <DependentUpon>FrmStudent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmYears.resx">
+      <DependentUpon>FrmYears.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainFrm.resx">
       <DependentUpon>MainFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControl1.resx">
+      <DependentUpon>UserControl1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControl\MainUC.resx">
+      <DependentUpon>MainUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControl\QuestionUC.resx">
+      <DependentUpon>QuestionUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControl\StudentUC.resx">
+      <DependentUpon>StudentUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControl\SubjectUC.resx">
+      <DependentUpon>SubjectUC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UserControl\UserControlUC.resx">
+      <DependentUpon>UserControlUC.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -121,7 +264,13 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Database\EDUDB.bak" />
+    <EntityDeploy Include="Models\ModelEdu.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelEdu.Designer.vb</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Models\ModelEdu.edmx.diagram">
+      <DependentUpon>ModelEdu.edmx</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -131,11 +280,13 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="UC\" />
+    <Folder Include="Validations\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="images\Close.png" />
@@ -146,6 +297,19 @@
     <Content Include="images\Edu-App Background box white-04.jpg" />
     <Content Include="images\Edu-App-04.png" />
     <Content Include="images\minimize.png" />
+    <Content Include="Models\ModelEdu.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelEdu.edmx</DependentUpon>
+      <LastGenOutput>ModelEdu.Context.vb</LastGenOutput>
+    </Content>
+    <Content Include="Models\ModelEdu.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelEdu.edmx</DependentUpon>
+      <LastGenOutput>ModelEdu.vb</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

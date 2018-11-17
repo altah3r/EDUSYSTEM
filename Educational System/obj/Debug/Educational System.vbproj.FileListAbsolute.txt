@@ -15,3 +15,32 @@ C:\Users\Altah3r\source\repos\Educational System\Educational System\bin\Debug\De
 C:\Users\Altah3r\source\repos\Educational System\Educational System\obj\Debug\Educational_System.MainFrm.resources
 C:\Users\Altah3r\source\repos\Educational System\Educational System\obj\Debug\Educational System.vbproj.CopyComplete
 C:\Users\Altah3r\source\repos\Educational System\Educational System\bin\Debug\MaterialSkin.dll
+C:\Users\apple\Desktop\EDU\EDUSYSTEM\Educational System\obj\Debug\Educational System.vbprojAssemblyReference.cache
+C:\Users\apple\Desktop\EDU\EDUSYSTEM\Educational System\obj\Debug\Educational_System.FrmLogin.resources
+C:\Users\apple\Desktop\EDU\EDUSYSTEM\Educational System\obj\Debug\Educational_System.MainFrm.resources
+C:\Users\apple\Desktop\EDU\EDUSYSTEM\Educational System\obj\Debug\Educational_System.Resources.resources
+C:\Users\apple\Desktop\EDU\EDUSYSTEM\Educational System\obj\Debug\Educational System.vbproj.GenerateResource.cache
+C:\Users\apple\Desktop\EDU\EDUSYSTEM\Educational System\obj\Debug\Educational System.vbproj.CoreCompileInputs.cache
+C:\Users\apple\Desktop\EDU\EDUSYSTEM\Educational System\obj\Debug\Educational System.exe
+C:\Users\apple\Desktop\EDU\EDUSYSTEM\Educational System\obj\Debug\Educational System.xml
+C:\Users\apple\Desktop\EDU\EDUSYSTEM\Educational System\obj\Debug\Educational System.pdb
+C:\Users\apple\Desktop\EDU\EDUSYSTEM\Educational System\bin\Debug\Educational System.exe.config
+C:\Users\apple\Desktop\EDU\EDUSYSTEM\Educational System\bin\Debug\Educational System.exe
+C:\Users\apple\Desktop\EDU\EDUSYSTEM\Educational System\bin\Debug\Educational System.pdb
+C:\Users\apple\Desktop\EDU\EDUSYSTEM\Educational System\bin\Debug\Educational System.xml
+C:\Users\apple\Desktop\EDU\EDUSYSTEM\Educational System\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\apple\Desktop\EDU\EDUSYSTEM\Educational System\bin\Debug\EntityFramework.dll
+C:\Users\apple\Desktop\EDU\EDUSYSTEM\Educational System\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\apple\Desktop\EDU\EDUSYSTEM\Educational System\bin\Debug\MaterialSkin.dll
+C:\Users\apple\Desktop\EDU\EDUSYSTEM\Educational System\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\apple\Desktop\EDU\EDUSYSTEM\Educational System\bin\Debug\EntityFramework.xml
+C:\Users\apple\Desktop\EDU\EDUSYSTEM\Educational System\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\apple\Desktop\EDU\EDUSYSTEM\Educational System\obj\Debug\Educational System.vbproj.CopyComplete
+C:\Users\apple\Desktop\EDU\EDUSYSTEM\Educational System\obj\Debug\Educational_System.FrmControlPanel.resources
+C:\Users\apple\Desktop\EDU\EDUSYSTEM\Educational System\obj\Debug\Educational_System.MainUC.resources
+C:\Users\apple\Desktop\EDU\EDUSYSTEM\Educational System\obj\Debug\Educational_System.FrmClass.resources
+C:\Users\apple\Desktop\EDU\EDUSYSTEM\Educational System\obj\Debug\Educational_System.FrmYears.resources
+C:\Users\apple\Desktop\EDU\EDUSYSTEM\Educational System\obj\Debug\Educational_System.StudentUC.resources
+C:\Users\apple\Desktop\EDU\EDUSYSTEM\Educational System\obj\Debug\Educational_System.UserControlUC.resources
+C:\Users\apple\Desktop\EDU\EDUSYSTEM\Educational System\obj\Debug\Educational_System.UserControl1.resources
+C:\Users\apple\Desktop\EDU\EDUSYSTEM\Educational System\obj\Debug\Educational_System.FrmStudent.resources
